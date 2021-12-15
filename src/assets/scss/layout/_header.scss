@@ -1,0 +1,40 @@
+.header {
+  position: relative;
+  padding: 57px 0;
+  @include r(1024) {
+    padding: 20px 0;
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: absolute;
+  top: -35px;
+  right: 15px;
+  z-index: 100;
+  width: 32px;
+  height: 25px;
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #34547a;
+    transition: width .3s ease-in-out;
+  }
+  @include r(1024) {
+    display: flex;
+  }
+  &.is-active{
+    span:nth-child(2) {
+      width: 80%;
+    }
+  }
+  &.is-active{
+    span:nth-child(3) {
+      width: 50%;
+    }
+  }
+}

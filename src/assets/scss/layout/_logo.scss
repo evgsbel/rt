@@ -1,0 +1,12 @@
+.logo {
+  color: #34547a;
+  font-family: 'Revalia', serif;
+  font-size: 3em;
+  line-height: 1.25;
+  transition: opacity .3s ease-in-out;
+  opacity: .8;
+  &:hover {
+    opacity: 1;
+    color: #34547A;
+  }
+}

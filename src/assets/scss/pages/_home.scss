@@ -1,0 +1,136 @@
+.hero {
+  padding: 150px 0;
+  background-color: #eeeff1;
+  @include r(768) {
+    padding: 30px 0;
+  }
+  &__img {
+    display: block;
+    margin-top: 25px;
+  }
+  &__subtitle {
+    margin-top: 60px;
+  }
+  &__btn {
+    margin-top: 60px;
+    @include btnPadding(20,41,20)
+  }
+}
+
+.about {
+  padding: 120px 0 100px;
+  text-align: center;
+  @include r(768) {
+    padding: 30px 0;
+  }
+  &__subtitle {
+    margin-top: 60px;
+  }
+}
+
+.projects {
+  padding: 100px 0;
+  background-color: #34547a;
+  @include r(768) {
+    padding: 30px 0 15px;
+  }
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    @include r(768) {
+      margin-bottom: 15px;
+    }
+  }
+  svg {
+    width: 46px;
+    height: 50px;
+  }
+  &__caption {
+    margin-left: 15px;
+    color: $white;
+    line-height: 1.625;
+    max-width: 70px;
+  }
+}
+
+.skills {
+  padding: 100px 0;
+  @include r(768) {
+    padding: 30px 0;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__list {
+    margin-top: 50px;
+  }
+  &__item {
+    padding-bottom: 20px;
+    position: relative;
+    width: 100%;
+    color: #727272;
+    border-bottom: 4px solid #c4c4c4;
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      background-color: #34547a;
+      height: 4px;
+    }
+    &_01::before {
+      width: 70%;
+    }
+    &_02::before {
+      width: 90%;
+    }
+    &_03::before {
+      width: 60%;
+    }
+  }
+  &__img {
+    @include r(768) {
+      margin-bottom: 30px;
+
+    }
+  }
+}
+
+.process {
+  &__hide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(52,84,122,.8);
+    opacity: 0;
+    z-index: -1;
+    transition: .3s ease-in-out;
+    svg {
+      width: 100px;
+      height: 57px;
+    }
+  }
+  &__item {
+    position: relative;
+    cursor: pointer;
+    &:hover > .process__hide {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
+
+.brands {
+  padding: 80px 0;
+  @include r(768) {
+    padding: 30px 0;
+  }
+}

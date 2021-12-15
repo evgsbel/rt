@@ -1,0 +1,27 @@
+.social {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__link {
+    color: $white;
+    svg {
+      width: 44px;
+      height: 23px;
+      fill: currentColor;
+      opacity: .6;
+      transition: opacity .3s ease-in-out;
+    }
+    &:hover {
+      color: $white;
+     svg {
+       opacity: 1;
+     }
+    }
+  }
+}

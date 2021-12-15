@@ -1,0 +1,57 @@
+.nav {
+  @include r(1024) {
+    position: absolute;
+    top: -70px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $white;
+    z-index: 10;
+    transition: left .3s ease-in-out;
+    &.is-open {
+      left: 0;
+    }
+  }
+  &__list {
+    width: 100%;
+    @include r(1024) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 30px;
+      padding-left: 15px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      @include r(1024) {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    line-height: 1.625;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out, text-shadow .3s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      display: block;
+      width: 0;
+      height: 2px;
+      background-color: #34547a;
+      transition: width .3s ease-in-out;
+    }
+    &:hover {
+      color: #34547a;
+      text-shadow: 1px 1px #34547a;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer {
+  padding: 50px 0;
+  background-color: #34547A;
+  color: $white;
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
